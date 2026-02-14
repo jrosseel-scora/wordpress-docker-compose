@@ -29,6 +29,7 @@ services:
       - ./wp-app:/var/www/html
       - ./themes:/var/www/html/wp-content/themes # directly accessible themes directory to facilitate themes uploads outside of container
       - ./plugins:/var/www/html/wp-content/plugins # directly accessible plugins directory to facilitate plugins uploads outside of container
+      - ./wpclifiles:/wpclifiles
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: "${DB_NAME}"
